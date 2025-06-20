@@ -4,7 +4,7 @@ const vueinst = new Vue({
     },
     methods: {
         changeRemaining(newRemaining){
-            
-        }
+            this.remaining=remaining-1;
+        },
     }
 });
