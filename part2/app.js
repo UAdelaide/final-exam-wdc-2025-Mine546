@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 //new
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
