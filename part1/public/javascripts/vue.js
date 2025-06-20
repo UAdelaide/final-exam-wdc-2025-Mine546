@@ -1,7 +1,6 @@
 const vueinst = new Vue({
     data: {
-        remaining: '10',
-
+        remaining: '10'
     },
     methods: {
     }
