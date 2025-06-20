@@ -1,3 +1,3 @@
-const vueinst = Vue.createApp({
+const app = Vue.createApp({
 
 }).mount('');
