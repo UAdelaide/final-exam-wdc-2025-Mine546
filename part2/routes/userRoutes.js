@@ -53,6 +53,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'no password' });
     }
     if (rows.length === 0) {
+      
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
