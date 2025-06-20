@@ -8,7 +8,9 @@ const app = Vue.createApp({
     },
     methods: {
         async fetchDogImage() {
-            try
+            try {
+                const res = await fetch('https://dog.ceo/api/breeds/image/random')
+            }
         }
     }
 })
