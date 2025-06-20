@@ -1,6 +1,6 @@
-const app = new Vue ({
+const app = new Vue({
     data: {
-        remaining:10,
+        remaining: 10,
         return: {
             count: 0
         }
