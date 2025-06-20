@@ -3,5 +3,6 @@ const vueinst = new Vue({
         remaining: '10'
     },
     methods: {
+        changeRemaining
     }
 });
