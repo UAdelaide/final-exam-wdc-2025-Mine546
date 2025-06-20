@@ -1,4 +1,4 @@
-const vuea = new Vue({
+const vueA = new Vue({
     el: '#app',
     data: {
         choose: 'Choose ...',
