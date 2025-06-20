@@ -4,10 +4,12 @@ const app = Vue.createApp({
         return{
             count: 10,
             dog:''
-        }
+        };
     },
     methods: {
-
+        async fetchDogImage() {
+            try
+        }
     }
 })
 
