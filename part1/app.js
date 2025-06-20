@@ -61,8 +61,8 @@ app.use(cookieParser());
 
 app.get('/api/dogs', async (req, res) => {
   try {
-    const [books] = await db.execute('select Dogs.name, Dogs.size, Users.username from Dogs join Users on Dogs.owner_id = Users.user_id;');
-    res.json(books);
+    const [dogs] = await db.execute('select Dogs.name, Dogs.size, Users.username from Dogs join Users on Dogs.owner_id = Users.user_id;');
+    res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
