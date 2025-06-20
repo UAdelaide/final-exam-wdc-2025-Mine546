@@ -1,9 +1,7 @@
 const  = new Vue({
     data: {
-        remaining: 10,
-        return: {
-            count: 0
-        }
+        remaining: '10',
+
     },
     methods: {
     }
