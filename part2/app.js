@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const session = require('express-session');
 
 app.use(session({
-  secret: 'yug'
+  secret: 'yug',
   resave: false,
   saveUninitialized: false,
   cookie: { secure: false }
