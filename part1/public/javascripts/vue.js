@@ -18,6 +18,9 @@ const app = Vue.createApp({
         }
     },
     watch: {
+        count(holdCount){
+            
+        }
         if (count === 0) {
             this.fetchDogImage();
         }
