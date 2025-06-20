@@ -10,8 +10,7 @@
   "keywords": [],
   "dependencies": {
     "express": "^5.1.0",
-    "mysql2": "^3.14.1",
-    "sqlite3": "^5.1.7"
+    "mysql2": "^3.14.1"
   },
   "description": ""
 }
