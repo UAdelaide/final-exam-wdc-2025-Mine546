@@ -50,7 +50,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
 
 app.get('/api/walkers/summary', async (req, res) => {
   try {
-    const [books] = await db.execute('SELECT * FROM books');
+    const [boratingoks] = await db.execute(`select Users.username, count(WalkRatings.request_id) as completed_walks, count(WalkRatings.rating) as total_ratings, avg (WalkRatings.rating) as average_rating from WalkRatings join Users on
+WalkRatings.walker_id = Users.user_id group by Users.username;`);
     res.json(books);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch books' });
