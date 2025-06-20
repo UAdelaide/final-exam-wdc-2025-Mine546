@@ -1,9 +1,9 @@
 const app = Vue.createApp({
 
     data(){
-        remaining:10,
+
         return{
-            count: 0
+            count: 10
         }
     },
     methods: {
