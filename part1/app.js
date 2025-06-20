@@ -34,7 +34,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
   }
 });
 
-app.get('/api', async (req, res) => {
+app.get('/api/walkers/summary', async (req, res) => {
   try {
     const [books] = await db.execute('SELECT * FROM books');
     res.json(books);
