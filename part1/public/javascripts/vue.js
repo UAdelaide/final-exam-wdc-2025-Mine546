@@ -12,9 +12,7 @@ const app = Vue.createApp({
                 const res = await fetch('https://dog.ceo/api/breeds/image/random');
                 const data = await res.json();
                 this.dogImage = data.message;
-            } catch (error {
-                console.error()
-            })
+            }
         }
     }
 })
