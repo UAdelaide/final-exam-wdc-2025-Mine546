@@ -6,10 +6,17 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
+app.use(express.json());
 //new
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+const session = require('express-session');
 
+app.use(session({
+  secret: 'yourSecretKey',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
