@@ -8,4 +8,6 @@ const app = Vue.createApp({
     methods: {
 
     }
-})app.mount('#app');
+})
+
+app.mount('#app');
