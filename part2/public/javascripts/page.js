@@ -176,7 +176,7 @@ function downvote(index) {
 
 
 function login(){
-    
+    window.alert("occurred")
     let user = {
         user: document.getElementById('username').value,
         pass: document.getElementById('password').value
