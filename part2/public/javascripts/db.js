@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../models/db');
 
 
-
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
