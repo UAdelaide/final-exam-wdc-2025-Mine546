@@ -1,4 +1,4 @@
-const  = new Vue({
+const vueinst = new Vue({
     data: {
         remaining: '10',
 
