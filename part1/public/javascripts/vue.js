@@ -1,3 +1,3 @@
-const app = VTTCue.createApp({
-    
+const app = Vue.createApp({
+    data
 })
