@@ -1,5 +1,5 @@
 const app = new Vue ({
-    data() {
+    data: {
         return{
             count: 0
         };
