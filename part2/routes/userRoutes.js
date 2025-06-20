@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
     if (rows.length === 0) {
-      return res.status(401).json({ error: `Invalid credentials: ${usernames}` });
+      return res.status(401).json({ error: `Invalid credentials: ${usernames} ` });
     }
     const user = rows[0];
 
@@ -54,7 +54,7 @@ router.post('/login', async (req, res) => {
     req.session.role = user.role;
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
-    res.status(500).json({ error: `Login failed ${req.session.userId}`});
+    res.status(500).json({ error: `Login failed `});
   }
 
 });
