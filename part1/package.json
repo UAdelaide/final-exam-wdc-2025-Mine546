@@ -8,9 +8,10 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
   "dependencies": {
     "express": "^5.1.0",
+    "mysql2": "^3.14.1",
     "sqlite3": "^5.1.7"
-  }
+  },
+  "description": ""
 }
