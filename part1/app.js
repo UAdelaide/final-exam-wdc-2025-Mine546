@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql2/promise');
 
+var indexRouter = require('./routes/index');
 
 var app = express();
 
@@ -60,5 +61,6 @@ WalkRatings.walker_id = Users.user_id group by Users.username;`);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', indexRouter);
 
 module.exports = app;
