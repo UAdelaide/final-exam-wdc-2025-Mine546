@@ -17,7 +17,11 @@ const app = Vue.createApp({
             }
         }
     },
-    
+    watch: {
+        if (newVal === 0) {
+            this.fetchDogImage();
+        }
+    }
 })
 
 app.mount('#app');
