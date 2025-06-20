@@ -13,8 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-let db;
-
 (async () => {
   try {
     // Connect to MySQL without specifying a database
