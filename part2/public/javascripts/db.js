@@ -14,7 +14,7 @@ let db;
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
-
+router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
