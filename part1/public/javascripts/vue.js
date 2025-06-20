@@ -1,3 +1,3 @@
-const app = Vue.createApp({
+const app = new Vue ({
     data
 })
