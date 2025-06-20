@@ -49,15 +49,16 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: `Invalid credentials: ${usernames}` });//tester
     }
     const user = rows[0];
-
+//sessions added
     req.session.userId = user.user_id;
     req.session.role = user.role;
+    //sends to owner
     if(req.session.role === 'owner'){
       res.redirect('/owner-dashboard.html');
-    }
+    } //sends to walker
     else if (req.session.role === 'walker'){
       res.redirect('walker-dashboard.html');
-    }
+    } //sends to jail
     else {
       res.status(401).json({ error: `Illegal! `});
     }
