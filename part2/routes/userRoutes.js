@@ -78,7 +78,7 @@ router.get('/logout', function (req, res){
 
 
 
-router.get('/dogName', async (req, res) => {
+router.get('/dogname', async (req, res) => {
   console.log(1);
   const userId = req.session.userId;
   console.log(2);

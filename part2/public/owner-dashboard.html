@@ -95,7 +95,7 @@
 
         async function loadNames() {
           try {
-            const res = await fetch('/api/users/dogName');
+            const res = await fetch('/api/users/dogname');
             owned.value = await res.json();
           } catch (err) {
             error.value = 'Failed to load dog names';
