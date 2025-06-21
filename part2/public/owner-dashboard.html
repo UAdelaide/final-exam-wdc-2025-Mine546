@@ -138,6 +138,7 @@
         }
 
         onMounted(() => {
+          loadNames();
           loadWalks();
         });
 
@@ -146,7 +147,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          owned
         };
       }
     }).mount('#app');
