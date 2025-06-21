@@ -76,12 +76,9 @@ router.get('/logout', function (req, res){
       res.status(500).json({ error: `Logout failed `});
     }
     else{
-      
+      res.redirect('/');
     }
   });
-  res.redirect('/');
-
-
 });
 
 
