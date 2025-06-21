@@ -85,7 +85,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
       where User.user_id = ?
     `, [req.session.userId]);
     for (let j=0; j<rows.length; j++){
-      const dogs[j] = rows[j];
+      [j] = rows[j];
     }
 
     for (let i=0; i<dogs.length; i++){
