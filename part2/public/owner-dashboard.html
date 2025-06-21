@@ -90,7 +90,7 @@
         const message = ref('');
         const error = ref('');
 
-        
+        const owned = ref([]);
 
         async function loadNames() {
           try {
@@ -146,8 +146,7 @@
           walks,
           message,
           error,
-          submitWalkRequest,
-          owned
+          submitWalkRequest
         };
       }
     }).mount('#app');
