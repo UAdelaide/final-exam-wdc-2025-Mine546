@@ -131,15 +131,15 @@
         async function loadDogs() {
           try{
             const res = await fetch('/api/owner-dogs');
-    const dogs = await res.json();
-    const sel = document.getElementById("dogName");
+            const dogs = await res.json();
+            const sel = document.getElementById("dogName");
 
-    dogs.forEach(dog => {
-      const option = document.createElement("option");
-      option.value = dog.dog_id;
-      option.text = dog.name;
-      sel.add(option);
-    });
+            dogs.forEach(dog => {
+              const option = document.createElement("option");
+              option.value = dog.dog_id;
+              option.text = dog.name;
+              sel.add(option);
+            });
   } catch (err) {
     console.error('Failed to load dogs:', err);
     error.value = 'Failed to load dogs';
