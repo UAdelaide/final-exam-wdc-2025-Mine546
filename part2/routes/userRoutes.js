@@ -79,7 +79,7 @@ router.get('/logout', function (req, res){
 
 
 router.get('/', async (req, res) => {
-  const userId = req.session.userid;
+  const userId = req.session.userId;
   if (!userId) return res.status(401).json({ error: 'Not logged in' });
   console.log(userId);
   try {
