@@ -79,9 +79,9 @@ router.get('/logout', function (req, res){
 
 
 router.get('/dogName', async (req, res) => {
-  console.log(1)
+  console.log(1);
   const userId = req.session.userId;
-  console.log(2)
+  console.log(2);
   if (!userId) return res.status(401).json({ error: 'Not logged in' });
   console.log(userId);
   try {
@@ -90,7 +90,7 @@ router.get('/dogName', async (req, res) => {
       [userId]
     );
     res.json(rows);
-    console.log(4)
+    console.log(4);
   } catch (err) {
     res.status(500).json({ error: 'Database error' });
   }
