@@ -87,7 +87,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
     console.log(`dogs: ${req.session.userId}`);
     for (let i=0; i<rows.length; i++){
       const sel = document.getElementById("dogName");
-      const el = document.getElement("option");
+      const el = ;
       sel.add(el);
     }
   } catch (error) {
