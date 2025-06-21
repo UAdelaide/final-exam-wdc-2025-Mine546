@@ -88,7 +88,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
     for (let i=0; i<rows.length; i++){
       const sel = document.getElementById("dogName");
       const el = document.getElement("option");
-      sel.add(el, sel.options[1]);
+      sel.add(el);
     }
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
