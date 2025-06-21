@@ -88,7 +88,9 @@ router.get('/owner-dashboard.html', async (req, res) => {
     const sel = document.getElementById("dogName");
     const el = document.getElement("option");
     for (let i=0; i<dogs.length; i++){
-      addEventListener()
+      const sel = document.getElementById("dogName");
+      const el = document.getElement("option");
+      
     }
 
 
