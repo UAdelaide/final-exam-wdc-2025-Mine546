@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
     } //sends to jail
     else {
       res.status(401).json({ error: `Illegal! `});
-    }
+    } //no requirement to send them back to login page
   } catch (error) {
     res.status(500).json({ error: `Login failed `});
   }
