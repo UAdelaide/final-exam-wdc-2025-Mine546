@@ -140,12 +140,12 @@
               option.text = dog.name;
               sel.add(option);
             });
-  } catch (err) {
-    console.error('Failed to load dogs:', err);
-    error.value = 'Failed to load dogs';
-  }
+          } catch (err) {
+            console.error('Failed to load dogs:', err);
+            error.value = 'Failed to load dogs';
           }
         }
+      }
 
         return {
           form,
