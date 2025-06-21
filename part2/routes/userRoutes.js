@@ -80,8 +80,10 @@ router.get('/logout', function (req, res){
 
 router.get('/owner-dashboard.html', async (req, res) => {
   try {
-    const [rows] = await db.query('select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id where User.user_id = ?');
-    res.json(rows);
+  const [rows] = await db.query(`
+      SELECT user_id, username, role FROM Users
+      WHERE username = ? AND password_hash = ?
+    `, [username]);    res.json(rows);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
