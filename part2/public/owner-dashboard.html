@@ -91,11 +91,11 @@
         const message = ref('');
         const error = ref('');
 
-        const 
+        const owned = ref([]);
         async function loadNames() {
           try {
             const res = await fetch('/api/users');
-            walks.value = await res.json();
+            owned.value = await res.json();
           } catch (err) {
             error.value = 'Failed to load dog names';
           }
