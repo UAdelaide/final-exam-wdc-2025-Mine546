@@ -92,6 +92,7 @@
         const error = ref('');
 
         const owned = ref([]);
+        
         async function loadNames() {
           try {
             const res = await fetch('/api/users');
