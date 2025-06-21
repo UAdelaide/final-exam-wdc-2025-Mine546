@@ -70,7 +70,9 @@ router.post('/login', async (req, res) => {
 
 
 
-router.get('/logout')
+router.get('/logout', function (req, res){
+  res.redirect('')
+})
 
 
 module.exports = router;
