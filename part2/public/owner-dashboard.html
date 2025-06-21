@@ -90,9 +90,9 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-
+// used for new function to hold json with nameandid
         const owned = ref([]);
-
+//new function
         async function loadNames() {
           try {
             const res = await fetch('/api/users/dogname');
