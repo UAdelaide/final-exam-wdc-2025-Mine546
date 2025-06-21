@@ -84,6 +84,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
       select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
       where User.user_id = ?
     `, [req.session.userId]);
+    for (let j=0; j<)
     const dogs = rows[0];
     for (let i=0; i<dogs.length; i++){
       const sel = document.getElementById("dogName");
