@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
     const user = rows[0];
 //sessions added
-    req.session.userId = user.user_id;
+    req.session.user = user.user_id;
     req.session.role = user.role;
     //sends to owner
     if(req.session.role === 'owner'){
