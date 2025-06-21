@@ -27,7 +27,7 @@
             <select v-model="form.name" class="form-control" required>
               <option disabled selected value=""> -- Select a dog --</option>
               <option v-for="dog in owned" :value="dog.name">
-                {{owned}}
+                {{dog.name}}
               </option>
             </select>
             <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
@@ -95,7 +95,7 @@
 
         async function loadNames() {
           try {
-            const res = await fetch('/api/users');
+            const res = await fetch('/api/users/dogName');
             owned.value = await res.json();
           } catch (err) {
             error.value = 'Failed to load dog names';
