@@ -24,15 +24,6 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog Name</label>
-            <select class="form-control" v-model="form.name" required>
-              <option disabled selectedvalue="">Select a dog</option>
-              <!-- VUE OPTIONS -->
-              <option v-for="dog in dogNames" :key="dog.name" :value="dog.name">
-                {{ dog.name }}
-              </option>
-
-            </select>
-
             <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
           </div>
           <div class="mb-3">
@@ -83,24 +74,13 @@
     createApp({
       setup() {
         const form = ref({
-          name: '', //new
+          dog_id: '',
           requested_time: '',
           duration_minutes: '',
           location: ''
         });
 
         const walks = ref([]);
-
-        //structured after loadwalks
-        async function loadDogs() {
-          try {
-            const res = await fetch('/api/users');
-            dogNames.value = await res.json();
-          } catch (err) {
-            error.value = 'Failed to load dogs';
-          }
-        }
-
         const message = ref('');
         const error = ref('');
 
@@ -127,7 +107,7 @@
             message.value = result.message;
             error.value = '';
             form.value = {
-              name: '', //new
+              dog_id: '',
               requested_time: '',
               duration_minutes: '',
               location: ''
@@ -141,7 +121,6 @@
 
         onMounted(() => {
           loadWalks();
-          loadDogs(); //new
         });
 
         return {
@@ -149,8 +128,7 @@
           walks,
           message,
           error,
-          submitWalkRequest,
-          dogNames //new
+          submitWalkRequest
         };
       }
     }).mount('#app');
