@@ -125,7 +125,7 @@
 
         onMounted(() => {
           loadWalks();
-          loadDogs();
+          await loadDogs();
         });
 
         async function loadDogs() {
@@ -136,12 +136,13 @@
 
             dogs.forEach(dog => {
               const option = document.createElement("option");
-              option.value = dog.name;
+              option.value = dog.dog_id;
               option.text = dog.name;
               sel.add(option);
             });
           } catch (err) {
             console.error('Failed to load dogs:', err);
+            error.value = 'Failed to load dogs';
           }
         }
 
