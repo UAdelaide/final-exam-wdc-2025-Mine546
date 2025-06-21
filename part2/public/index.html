@@ -40,7 +40,7 @@
           dog:''
         };
       },
-    methods: {
+      methods: {
         async fetchDogImage() {
             try {
                 const res = await fetch('https://dog.ceo/api/breeds/image/random');
@@ -50,14 +50,14 @@
                 console.error('whoops', error);
             }
         }
-    },
-    watch: {
+      },
+      watch: {
         count(holdCount){
             if (holdCount === 0) {
                 this.fetchDogImage();
             }
         }
-    }
+      }
 
     }).mount('#app');
   </script>
