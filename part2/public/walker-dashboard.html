@@ -54,7 +54,7 @@
             const res = await fetch('/api/walks');
             if (!res.ok) throw new Error('Failed to load walk requests');
             const data = await res.json();
-            
+            user.value = Number(data.user)
           } catch (err) {
             error.value = err.message;
           }
