@@ -30,7 +30,6 @@ router.post('/register', async (req, res) => {
 });
 
 router.get('/me', (req, res) => {
-  console.log(req.session.userId);
   if (!req.session.user) {
     return res.status(401).json({ error: 'Not logged in' });
   }
