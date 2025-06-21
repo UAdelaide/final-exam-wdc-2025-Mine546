@@ -80,7 +80,6 @@ router.get('/logout', function (req, res){
 
 router.get('/owner-dashboard.html', async (req, res) => {
   try {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
   const [rows] = await db.query(`
       select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
       where Dogs.owner_id = ?
@@ -91,13 +90,9 @@ router.get('/owner-dashboard.html', async (req, res) => {
       const el = document.getElement("option");
       sel.add(el, sel.options[1]);
     }
-
-
   } catch (error) {
-    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
-  console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
 });
 
 
