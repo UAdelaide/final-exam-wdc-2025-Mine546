@@ -78,7 +78,7 @@ router.get('/logout', function (req, res){
 
 
 
-router.get('/', async (req, res) => {
+router.get('/owner-dashboard.html', async (req, res) => {
   try {
     const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
     res.json(rows);
