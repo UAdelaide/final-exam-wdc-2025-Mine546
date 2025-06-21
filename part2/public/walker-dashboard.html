@@ -48,13 +48,12 @@
         const message = ref('');
         const error = ref('');
         const user = ref(3);
-
+        
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
             if (!res.ok) throw new Error('Failed to load walk requests');
-            const data = await res.json();
-            user.value = Number(data.user)
+            walks.value = await res.json();
           } catch (err) {
             error.value = err.message;
           }
