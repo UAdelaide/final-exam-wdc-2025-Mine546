@@ -82,7 +82,7 @@
     createApp({
       setup() {
         const form = ref({
-          name: '',
+          name: '', //new
           requested_time: '',
           duration_minutes: '',
           location: ''
@@ -90,6 +90,7 @@
 
         const walks = ref([]);
 
+        //structured after loadwalks
         async function loadDogs() {
           try {
             const res = await fetch('/api/users');
