@@ -125,7 +125,7 @@
             message.value = result.message;
             error.value = '';
             form.value = {
-              name: '',
+              name: '', //new
               requested_time: '',
               duration_minutes: '',
               location: ''
@@ -139,7 +139,7 @@
 
         onMounted(() => {
           loadWalks();
-          loadDogs();
+          loadDogs(); //new
         });
 
         return {
@@ -148,7 +148,7 @@
           message,
           error,
           submitWalkRequest,
-          dogNames
+          dogNames //new
         };
       }
     }).mount('#app');
