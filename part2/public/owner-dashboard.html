@@ -24,8 +24,8 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog Name</label>
-            <select id="dogName" class="form-control" v-model="form.dog_id" required>
-              <option value="chooseDog" disabled selected> -- Choose a dog --</option>
+            <select id="dogName" class="form-control" required>
+              <option value="chooseDog" disabled> -- Choose a dog --</option>
             </select>
 
             <!-- <input v-model="form.dog_id" type="number" class="form-control" required> -->
@@ -125,27 +125,7 @@
 
         onMounted(() => {
           loadWalks();
-          await loadDogs();
         });
-
-        async function loadDogs() {
-          try{
-            const res = await fetch('/api/owner-dogs');
-            const dogs = await res.json();
-            const sel = document.getElementById("dogName");
-
-            dogs.forEach(dog => {
-              const option = document.createElement("option");
-              option.value = dog.dog_id;
-              option.text = dog.name;
-              sel.add(option);
-            });
-          } catch (err) {
-            console.error('Failed to load dogs:', err);
-            error.value = 'Failed to load dogs';
-          }
-        }
-
 
         return {
           form,
