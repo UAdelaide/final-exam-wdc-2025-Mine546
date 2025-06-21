@@ -73,9 +73,11 @@ router.post('/login', async (req, res) => {
 router.get('/logout', function (req, res){
   req.session.destroy(function(err){
     if (err){
+      res.status(500).json({ error: `Logout failed `});
+    }
+    else{
       
     }
-      res.status(500).json({ err: `Logout failed `});
   });
   res.redirect('/');
 
