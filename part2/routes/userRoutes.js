@@ -85,8 +85,11 @@ router.get('/owner-dashboard.html', async (req, res) => {
       where User.user_id = ?
     `, [req.session.userId]);
     const dogs = rows[0];
-    
-    res.status(500).json({error: ` po ${dogs} `});
+    for (let i=0; i<dogs.length; i++){
+      addEventListener()
+    }
+
+
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
