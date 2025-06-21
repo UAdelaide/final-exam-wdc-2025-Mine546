@@ -94,7 +94,7 @@
         const owned = ref([]);
 //new function
         async function loadNames() {
-          try {
+          try { //put it in userroutes because its used by owners
             const res = await fetch('/api/users/dogname');
             owned.value = await res.json();
           } catch (err) {
@@ -139,7 +139,7 @@
 
         onMounted(() => {
 
-          loadWalks();
+          loadWalks(); //onspawn
           loadNames();
         });
 
