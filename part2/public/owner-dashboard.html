@@ -24,6 +24,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Dog Name</label>
+            <!-- NEW OPTIONS -->
             <select v-model="form.dog_id" class="form-control" required>
               <option disabled value=""> -- Select a dog --</option>
               <option v-for="dog in owned" :value="dog.dog_id">
