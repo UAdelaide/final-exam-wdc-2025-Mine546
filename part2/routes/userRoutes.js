@@ -83,7 +83,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
   const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
-    `, [username]);    res.json(rows);
+    `, [req.session.userId]);    res.json(rows);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
