@@ -26,7 +26,7 @@
             <label class="form-label">Dog Name</label>
             <select v-model="form.name" class="form-control" required>
               <option disabled selected value=""> -- Select a dog --</option>
-              <option v-for="dog in walks">
+              <option v-for="dog in walks" :key="dog.id" :value="dog.id">
                 {{form.name}}
               </option>
             </select>
