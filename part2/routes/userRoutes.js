@@ -82,7 +82,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
   try {
     const [rows] = await db.query('select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id where User.user_id = ?');
     res.json(rows);
-  } catch (error) {
+  } //catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
 });
