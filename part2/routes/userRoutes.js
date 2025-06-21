@@ -77,7 +77,7 @@ router.get('/logout', function (req, res){
 
 
 
-
+//selects name and id to send back
 router.get('/dogname', async (req, res) => {
   const userId = req.session.userId;
   if (!userId) return res.status(401).json({ error: 'Not logged in' });
