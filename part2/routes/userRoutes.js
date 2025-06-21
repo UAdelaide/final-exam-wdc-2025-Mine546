@@ -85,12 +85,10 @@ router.get('/owner-dashboard.html', async (req, res) => {
       where User.user_id = ?
     `, [req.session.userId]);
     const dogs = rows[0];
-    const sel = document.getElementById("dogName");
-    const el = document.getElement("option");
     for (let i=0; i<dogs.length; i++){
       const sel = document.getElementById("dogName");
       const el = document.getElement("option");
-      
+
     }
 
 
