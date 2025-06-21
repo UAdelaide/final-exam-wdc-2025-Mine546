@@ -91,7 +91,7 @@
             const res = await fetch('/api/users');
             walks.value = await res.json();
           } catch (err) {
-            error.value = 'Failed to load walk requests';
+            error.value = 'Failed to load dog names';
           }
         }
 
