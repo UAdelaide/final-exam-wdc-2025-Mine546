@@ -30,7 +30,7 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.get('/api/dogs', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const [dogs] = await db.execute('select Dogs.name, Dogs.size, Users.username from Dogs join Users on Dogs.owner_id = Users.user_id;');
     res.json(dogs);
