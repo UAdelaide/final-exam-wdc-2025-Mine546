@@ -78,7 +78,7 @@ router.get('/logout', function (req, res){
 
 
 
-router.get('/owner-dashboard.html', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
   const [rows] = await db.query(`
       select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
