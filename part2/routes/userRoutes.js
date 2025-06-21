@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
       res.redirect('/owner-dashboard.html');
     } //sends to walker
     else if (req.session.role === 'walker'){
-      res.redirect('walker-dashboard.html');
+      res.redirect('/walker-dashboard.html');
     } //sends to jail
     else {
       res.status(401).json({ error: `Illegal! `});
