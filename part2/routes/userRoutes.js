@@ -78,15 +78,19 @@ router.get('/logout', function (req, res){
 
 
 
-router.get('/', async (req, res) => {
+router.get('/api/users', async (req, res) => {
+  const userId = req.session.userid;
+  if (!userId) return res.status(401).json({ error: 'Not logged in' });
+
   try {
-  const [rows] = await db.query(`
-      select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
-      where Dogs.owner_id = ?
-    `, [req.session.userId]);
+    const [rows] = await db.query(
+      `SELECT name FROM Dogs WHERE owner_id = ?`,
+      [userId]
+    );
     res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch dogs' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Database error' });
   }
 });
 
