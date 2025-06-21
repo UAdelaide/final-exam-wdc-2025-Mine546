@@ -90,7 +90,7 @@ router.get('/dogName', async (req, res) => {
       [userId]
     );
     res.json(rows);
-    console.log(1)
+    console.log(4)
   } catch (err) {
     res.status(500).json({ error: 'Database error' });
   }
