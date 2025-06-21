@@ -196,11 +196,11 @@ function downvote(index) {
 
     // Open connection to server & send the post data using a POST request
     // We will cover POST requests in more detail in week 8
-    xmlhttp.open("POST", "/users/login", true);
-    xmlhttp.setRequestHeader("Content-type", "application/json");
-    xmlhttp.send(JSON.stringify(user));
+//     xmlhttp.open("POST", "/users/login", true);
+//     xmlhttp.setRequestHeader("Content-type", "application/json");
+//     xmlhttp.send(JSON.stringify(user));
 
-}
+// }
 
 function logout(){
 
