@@ -79,6 +79,7 @@ router.get('/logout', function (req, res){
 
 
 router.get('/owner-dashboard.html', async (req, res) => {
+  console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
   try {
     console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
   const [rows] = await db.query(`
@@ -94,8 +95,10 @@ router.get('/owner-dashboard.html', async (req, res) => {
 
 
   } catch (error) {
+    console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
+  console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa');
 });
 
 
