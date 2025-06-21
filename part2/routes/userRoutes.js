@@ -82,7 +82,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
   try {
   const [rows] = await db.query(`
       select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
-      where User.user_id = ?
+      where Dogs.owner_id = ?
     `, [req.session.userId]);
 
     for (let i=0; i<rows.length; i++){
