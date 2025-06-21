@@ -81,7 +81,7 @@ router.get('/logout', function (req, res){
 router.get('/owner-dashboard.html', async (req, res) => {
   try {
   const [rows] = await db.query(`
-      select Dogs.name, Dogs.dog_id from Dogs join Users on Dogs.owner_id = Users.user_id
+      select Dogs.name from Dogs join Users on Dogs.owner_id = Users.user_id
       where Dogs.owner_id = ?
     `, [req.session.userId]);
     res.json(rows);
