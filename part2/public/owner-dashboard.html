@@ -27,7 +27,7 @@
             <!-- NEW OPTIONS -->
             <select v-model="form.dog_id" class="form-control" required>
               <option disabled value=""> -- Select a dog --</option>
-              <!-- dog. -->
+              <!-- dog.dog_id is the value returned into form.dog_id so it can be submitted into walkrequests -->
               <option v-for="dog in owned" :value="dog.dog_id">
                 {{dog.name}}
               </option>
