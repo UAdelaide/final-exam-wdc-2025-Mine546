@@ -85,6 +85,7 @@ router.get('/owner-dashboard.html', async (req, res) => {
       where User.user_id = ?
     `, [req.session.userId]);
     const dogs = rows[0];
+    const sel = document.get
     for (let i=0; i<dogs.length; i++){
       addEventListener()
     }
