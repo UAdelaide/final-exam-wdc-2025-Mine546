@@ -59,18 +59,18 @@
           }
         }
 
-        async function getCurrentUser() {
-          try {
-            const res = await fetch('/api/users/me', {
-              credentials: 'include'
-            });
-            if (!res.ok) throw new Error('Failed to load current user');
-            const data = await res.json();
-            user.value = Number(data.user);
-          } catch (err) {
-            error.value = err.message;
-          }
-        }
+        // async function getCurrentUser() {
+        //   try {
+        //     const res = await fetch('/api/users/me', {
+        //       credentials: 'include'
+        //     });
+        //     if (!res.ok) throw new Error('Failed to load current user');
+        //     const data = await res.json();
+        //     user.value = Number(data.user);
+        //   } catch (err) {
+        //     error.value = err.message;
+        //   }
+        // }
 
         async function applyToWalk(requestId) {
           try {
